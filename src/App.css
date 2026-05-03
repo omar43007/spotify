@@ -1,0 +1,87 @@
+/* src/App.css */
+:root {
+  --sidebar-width: 250px;
+  --primary-color: #1DB954;
+  --dark-bg: #121212;
+  --medium-bg: #181818;
+  --light-bg: #282828;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Circular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: flex;
+  min-height: 25vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  transition: var(--transition);
+  margin-left: var(--sidebar-width);
+}
+
+.sidebar-open .main-content {
+  margin-left: var(--sidebar-width);
+}
+
+.toggle-sidebar-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .sidebar-open .main-content {
+    margin-left: var(--sidebar-width);
+  }
+  
+  .toggle-sidebar-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --sidebar-width: 180px;
+  }
+  
+  .main-content {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,120 @@
+/* Statistics.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --spotify-black: #121212;
+  --spotify-darkgray: #181818;
+  --spotify-gray: #282828;
+  --spotify-lightgray: #404040;
+  --spotify-green: #1DB954;
+  --spotify-lightgreen: #1ed760;
+}
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--spotify-black);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-spotify-black {
+  background-color: var(--spotify-black);
+}
+
+.bg-spotify-darkgray {
+  background-color: var(--spotify-darkgray);
+}
+
+.bg-spotify-gray {
+  background-color: var(--spotify-gray);
+}
+
+.bg-spotify-lightgray {
+  background-color: var(--spotify-lightgray);
+}
+
+.bg-spotify-green {
+  background-color: var(--spotify-green);
+}
+
+.text-spotify-green {
+  color: var(--spotify-green);
+}
+
+.text-spotify-lightgreen {
+  color: var(--spotify-lightgreen);
+}
+
+.text-spotify-lightgray {
+  color: #b3b3b3;
+}
+
+.border-spotify-lightgray {
+  border-color: var(--spotify-lightgray);
+}
+
+.border-spotify-green {
+  border-color: var(--spotify-green);
+}
+
+.recharts-default-tooltip {
+  background-color: var(--spotify-gray) !important;
+  border: 1px solid var(--spotify-lightgray) !important;
+  border-radius: 4px !important;
+}
+
+.recharts-tooltip-item-name, 
+.recharts-tooltip-item-value {
+  color: white !important;
+}
+
+.recharts-legend-item-text {
+  fill: white !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #b3b3b3 !important;
+  font-size: 12px !important;
+}
+
+.recharts-cartesian-axis-line {
+  stroke: var(--spotify-lightgray) !important;
+}
+
+.recharts-polar-grid-angle {
+  stroke: var(--spotify-lightgray) !important;
+}
+
+ .custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #282828;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1DB954;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(29, 185, 84, 0.3);
+  border-radius: 50%;
+  border-top-color: #1DB954;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
